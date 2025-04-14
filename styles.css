@@ -1,0 +1,190 @@
+/* ================================
+   🌍 Global Styles (Fixes White Issues)
+   ================================ */
+body {
+    background-color: rgba(255,255,255,0.5);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px; /* Prevents content from hiding under fixed nav */
+}
+
+/* Remove all unwanted white gaps */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   📌 Sticky Navigation Bar (Fixed)
+   ================================ */
+nav {
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 8px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* ================================
+   🎨 Sections (Fixes White Blocks)
+   ================================ */
+section {
+    background-color: rgba(255,255,255,0.5);
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+/* ================================
+   📸 Image Styling (Fixes White Space)
+   ================================ */
+img {
+    display: block;  
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 2;
+    border-radius: 10px;
+}
+
+/* ================================
+   📸 Gallery Styling (No Extra Space)
+   ================================ */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* ================================
+   📊 Table Styling
+   ================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+/* ================================
+   🎥 Video & Media Sections
+   ================================ */
+
+
+/* ================================
+   🌟 Testimonials Section
+   ================================ */
+.testimonials {
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.testimonial {
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+   📱 Mobile Optimization
+   ================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px ;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    /* ✅ ADD THESE NEW LINES INSIDE HERE */
+    .gallery-container, .testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pricing table, .contact, .video, .spotify-embed {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+  }
+}/* style.css */
+#cursor {
+  position: fixed;
+  pointer-events: none; /* Prevent the cursor from interfering with clicks */
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  background: blue; /* Set your desired cursor color */
+  border-radius: 50%; /* Make it a circle */
+  opacity: 0.7; /* Adjust transparency as needed */
+  transform: translate(-50%, -50%); /* Center the cursor */
+  /* Add animation for cursor movement */
+  animation: cursor 0.5s infinite linear;
+}
